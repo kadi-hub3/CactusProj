@@ -18,7 +18,7 @@ const Contact = () => {
           </p>
         </div>
       </div>
-      <div className="col-span-2">
+      <div className="w-full px-32 col-span-2">
         <Form />
       </div>
     </section>
