@@ -1,29 +1,31 @@
-import Head from 'next/head'
+import Head from "next/head";
 
-export default function Home () {
+export default function Home({ projects }) {
+  console.log(projects);
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen py-2'>
+    <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
-        <title>Create Next App</title>
-        <link rel='icon' href='/favicon.ico' />
+        <title>Alessio Muggani</title>
+        <meta name="keywords" content="Alession Muggani portfolio" />
+        <link rel="icon" href="/favicon.ico" />
+        <script
+          src="https://kit.fontawesome.com/e20sdfsd9.js"
+          crossOrigin="anonymous"
+        ></script>
       </Head>
-
-      <main className='flex flex-col items-center justify-center flex-1 w-full px-20 text-center'>
-        <h1 className='text-6xl font-bold'>
-          Frontend Test{' '}
-          <a className='text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-blue-500' href='https://estudiocactus.com'>
-            Estudio Cactus
-          </a>
-        </h1>
-
-        <p className='mt-3 text-2xl'>
-          Get started by editing{' '}
-          <code className='p-3 font-mono text-lg bg-gray-100 rounded-md'>
-            pages/index.js
-          </code>
-        </p>
-
-      </main>
     </div>
-  )
+  );
 }
+
+export const getStaticProps = async () => {
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/posts?_limit=6`
+  );
+  const projects = await res.json();
+
+  return {
+    props: {
+      projects,
+    },
+  };
+};
