@@ -1,15 +1,14 @@
 const About = () => {
   return (
-    <section className="w-screen h-screen items-center justify-items-center grid grid-cols-5  md:row-auto gap-x-20 py-20 px-20">
+    <section className="w-screen h-screen items-center justify-items-center grid grid-cols-5 md:grid-flow-row gap-x-20 px-36">
       <div className="col-span-2 ">
-        <div className="relative row-span-1 w-full">
-          <h1 className="text-9xl text-gray-200 uppercase tracking-widest">
+        <div className="relative row-span-1 w-full ">
+          <h1 className="text-8xl text-gray-200 uppercase tracking-wider my-20 font-bold">
             who <br /> we are ?
           </h1>
           <h2 className="font-serif absolute text-6xl left-0 top-10 font-bold tracking-wider leading-relaxed">
-            A few words
-            <br /> <span className="py-2 border-b-4	border-red-600">about </span>
-            me
+            <span className="py-2 border-b-4	border-red-600"> A few </span>words
+            about me
           </h2>
         </div>
         <div className="row-span-2">
@@ -33,7 +32,7 @@ const About = () => {
           sit amet nibh aliquam posuere id vitae urna. Sed tempor tempor sem,
           sit amet suscipit felis sollicitudin id.
         </p>
-        <button className="m-10 p-4 capitalize border-2 border-gray-900 hover:bg-black hover:text-white">
+        <button className="font-sans m-10 p-4 capitalize border-2 border-gray-900 tracking-wider hover:bg-black hover:text-white">
           view portfolio
         </button>
       </div>

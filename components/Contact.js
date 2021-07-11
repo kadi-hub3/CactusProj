@@ -1,10 +1,11 @@
 import Form from "./Form";
+import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <section className="h-screen w-screen items-center justify-items-center grid grid-cols-3 md:row-auto gap-x-20  py-20">
-      <div className="h-full w-full bg-gray-900 text-white col-span-1 text-start p-8 bg-gray-900 justify-items-center">
-        <h2 className="font-serif text-4xl font-bold tracking-wider p-10">
+    <section className="h-screen w-screen items-center justify-items-center grid grid-cols-3 md:row-auto gap-x-20 py-10">
+      <div className="h-5/6 w-full bg-black text-white col-span-1 text-start mb-5 bg-gray-900 justify-items-center py-20">
+        <h2 className="font-serif text-5xl font-bold tracking-wider px-10 mb-20">
           Contact me
         </h2>
         <h4 className="font-serif text-2xl px-12 py-4 tracking-widest">
@@ -14,17 +15,17 @@ const Contact = () => {
           Brand manager
         </h5>
         <div className="px-14 py-6 text-xl font-sans">
-          <p className="text-blue-300 m-2">
-            <i className="fab fa-linkedin mx-2"></i>
+          <p className="text-blue-300 m-2 flex">
+            <FaLinkedin className="mx-2" />
             linkedin.com/alessio
           </p>
-          <p className="text-red-300 m-2">
-            <i className="fab fa-envelope mx-2"></i>
+          <p className="text-red-300 m-2 flex">
+            <FaEnvelope className="mx-2" />
             alessio@alessio.com
           </p>
         </div>
       </div>
-      <div className="w-full px-32 col-span-2">
+      <div className="w-full h-2/3 px-32 col-span-2">
         <Form />
       </div>
     </section>

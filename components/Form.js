@@ -8,7 +8,7 @@ const TextInput = ({ label, ...props }) => {
     <>
       <label htmlFor={props.id || props.name}></label>
       <input
-        className="text-2xl text-black w-full py-2 border-b-2 border-gray-500 h-20 tracking-wider"
+        className="text-2xl text-black w-full py-2 border-b-2 border-gray-500 h-15 tracking-wider italic"
         {...field}
         {...props}
       />
@@ -21,8 +21,8 @@ const CheckBox = ({ children, ...props }) => {
 
   return (
     <>
-      <label htmlFor={props.id || props.name}>
-        <input type="checkbox" className="w-6 h-6 m-6" {...field} {...props} />
+      <label htmlFor={props.id || props.name} className="flex my-6">
+        <input type="checkbox" className="w-6 h-6 mx-4" {...field} {...props} />
         {children}
       </label>
       {meta.touched && meta.error ? <div className="">{meta.error}</div> : null}
@@ -63,7 +63,7 @@ const FormComponent = () => {
       }}
     >
       {(props) => (
-        <Form className="grid grid-rows gap-6 ml-24 my-20">
+        <Form className="grid grid-rows gap-6 ml-24 w-5/6">
           <h1 className="font-serif text-5xl font-bold tracking-wider">
             <span className="py-2 border-b-4 border-red-600">Ask a </span>
             question
@@ -100,7 +100,7 @@ const FormComponent = () => {
           </CheckBox>
           <button
             type="submit"
-            className="m-10 p-4 capitalize border-2 border-gray-900 hover:bg-black hover:text-white"
+            className="m-10 p-4 capitalize border-2 border-gray-900 tracking-wider hover:bg-black hover:text-white"
           >
             {props.isSubmitting ? "Loading.." : "Submit"}
           </button>
