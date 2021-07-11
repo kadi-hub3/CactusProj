@@ -7,8 +7,11 @@ const TextInput = ({ label, ...props }) => {
   return (
     <>
       <label htmlFor={props.id || props.name}></label>
-      <input className="text-lg text-gray-900 w-full" {...field} {...props} />
-      <hr />
+      <input
+        className="text-2xl text-black w-full py-2 border-b-2 border-gray-500 h-20 tracking-wider"
+        {...field}
+        {...props}
+      />
       {meta.touched && meta.error ? <div className="">{meta.error}</div> : null}
     </>
   );
@@ -19,7 +22,7 @@ const CheckBox = ({ children, ...props }) => {
   return (
     <>
       <label htmlFor={props.id || props.name}>
-        <input type="checkbox" {...field} {...props} />
+        <input type="checkbox" className="w-6 h-6 m-6" {...field} {...props} />
         {children}
       </label>
       {meta.touched && meta.error ? <div className="">{meta.error}</div> : null}
@@ -60,7 +63,11 @@ const FormComponent = () => {
       }}
     >
       {(props) => (
-        <Form className="grid grid-rows gap-6 ">
+        <Form className="grid grid-rows gap-6 ml-24 my-20">
+          <h1 className="font-serif text-5xl font-bold tracking-wider">
+            <span className="py-2 border-b-4 border-red-600">Ask a </span>
+            question
+          </h1>
           <TextInput
             label="Name"
             name="name"
@@ -86,7 +93,10 @@ const FormComponent = () => {
             placeholder="Leave your message  "
           />
           <CheckBox name="acceptedTerms">
-            I accept the terms and conditions
+            <p className="text-xl text-gray-900">
+              By submitting this form, you confirm that you have read and agree
+              to Alessio Privacy Statement
+            </p>
           </CheckBox>
           <button
             type="submit"

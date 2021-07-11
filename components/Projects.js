@@ -2,12 +2,12 @@ import Swiper from "./Swiper";
 
 const Projects = () => {
   return (
-    <section className="h-screen w-screen items-center justify-items-center grid grid-cols-2 md:row-auto gap-x-20 py-20 px-36">
-      <div>
-        <h2 className="text-3xl my-8 font-bold tracking-wider">
-          Recent <span className="underline">projects</span>
+    <section className="h-screen w-screen items-center justify-items-start grid grid-cols-8 md:row-auto gap-x-20 py-20 px-36">
+      <div className="col-span-3 justify-items-start">
+        <h2 className="font-serif text-6xl font-bold tracking-wider leading-relaxed">
+          Recent <span className="py-2 border-b-4	border-red-600">proje</span>cts
         </h2>
-        <p className="leading-10 text-black border-black">
+        <p className="font-sans tracking-wide leading-10 text-black mt-8">
           Here you can see a sample of our latest works. If that doesn't
           convince you enough, check out the full experience under the button
         </p>
@@ -15,7 +15,7 @@ const Projects = () => {
           ... all projects
         </button>
       </div>
-      <div className="w-full px-20">
+      <div className="col-span-5 w-full h-1/2 ">
         <Swiper />
       </div>
     </section>

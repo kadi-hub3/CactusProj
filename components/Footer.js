@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="h-30 w-screen items-center justify-items-center grid grid-cols-3  gap-x-20 py-14 bg-black">
+    <footer className="h-30 w-screen items-center justify-items-center grid grid-cols-3 gap-x-20 py-14 bg-black z-10">
       <h3 className="text-lg text-white font-bold">Alessio Muggani</h3>
       <ul className="flex justify-around text-white text-base font-bold">
         <li className="mx-4 hover:text-red-600">Home</li>
