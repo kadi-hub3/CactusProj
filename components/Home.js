@@ -1,7 +1,7 @@
 import Swiper from "./Swiper";
 const Home = () => {
   return (
-    <section className="relative w-screen h-screen">
+    <section className="w-screen h-screen">
       <Swiper />
     </section>
   );

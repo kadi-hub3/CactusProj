@@ -2,15 +2,13 @@ import SwiperReviews from "./SwiperReviews";
 
 const Reviews = () => {
   return (
-    <section className=" w-screen h-screen items-center justify-items-center grid grid-cols-5 gap-x-20 px-36 py-10 bg-white">
-      <div className="col-span-1"></div>
-      <div className="relative col-span-3 w-full h-3/5">
-        <h1 className="absolute -top-20 right-60 text-9xl text-gray-300 uppercase tracking-wider font-bold">
+    <section className="h-full w-full lg:h-screen items-center justify-items-center py-20 grid grid-rows-5 grid-cols-1 lg:gap-x-20 md:px-20 lg:px-36 bg-white">
+      <div className="row-span-5 relative lg:col-span-3 w-5/6 md:py-16">
+        <h1 className="absolute -top-20 right-10 lg:-top-20 md:right-40 text-6xl md:text-8xl text-gray-200 uppercase tracking-wider my-10 md:my-20 font-bold">
           clients
         </h1>
         <SwiperReviews />
       </div>
-      <div className="col-span-1"></div>
     </section>
   );
 };

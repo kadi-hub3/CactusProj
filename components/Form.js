@@ -8,7 +8,7 @@ const TextInput = ({ label, ...props }) => {
     <>
       <label htmlFor={props.id || props.name}></label>
       <input
-        className="text-2xl text-black w-full py-2 border-b-2 border-gray-500 h-15 tracking-wider italic"
+        className="text-md md:text-2xl text-black w-full py-2 border-b-2 border-gray-500 md:h-15 tracking-wider italic"
         {...field}
         {...props}
       />
@@ -22,7 +22,7 @@ const CheckBox = ({ children, ...props }) => {
   return (
     <>
       <label htmlFor={props.id || props.name} className="flex my-6">
-        <input type="checkbox" className="w-6 h-6 mx-4" {...field} {...props} />
+        <input type="checkbox" className="w-8 h-8 mx-4" {...field} {...props} />
         {children}
       </label>
       {meta.touched && meta.error ? <div className="">{meta.error}</div> : null}
@@ -43,7 +43,7 @@ const FormComponent = () => {
       validationSchema={Yup.object({
         name: Yup.string()
           .min(3, "Must be at least 3 characters long")
-          .max(15, "Must be  15 characters long or less")
+          .max(45, "Must be  15 characters long or less")
           .required("Required"),
         email: Yup.string().email("Invalid email address").required("Required"),
         phone: Yup.string().max("Invalid phone number"),
@@ -63,9 +63,11 @@ const FormComponent = () => {
       }}
     >
       {(props) => (
-        <Form className="grid grid-rows gap-6 ml-24 w-5/6">
-          <h1 className="font-serif text-5xl font-bold tracking-wider">
-            <span className="py-2 border-b-4 border-red-600">Ask a </span>
+        <Form className="grid grid-rows gap-6  px-12 md:px-32 xl:ml-24 h-full w-full">
+          <h1 className="font-serif text-3xl lg:text-6xl font-bold tracking-wide md:tracking-wider">
+            <span className="pt-2 border-b-2 lg:border-b-4 border-red-600">
+              Ask a{" "}
+            </span>
             question
           </h1>
           <TextInput
@@ -93,7 +95,7 @@ const FormComponent = () => {
             placeholder="Leave your message  "
           />
           <CheckBox name="acceptedTerms">
-            <p className="text-xl text-gray-900">
+            <p className="text-md lg:text-xl text-gray-900">
               By submitting this form, you confirm that you have read and agree
               to Alessio Privacy Statement
             </p>
