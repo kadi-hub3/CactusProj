@@ -63,8 +63,8 @@ const FormComponent = () => {
       }}
     >
       {(props) => (
-        <Form className="grid grid-rows gap-6  px-12 md:px-32 xl:ml-24 h-full w-full">
-          <h1 className="font-serif text-3xl lg:text-6xl font-bold tracking-wide md:tracking-wider">
+        <Form className="grid grid-rows gap-6  px-12 md:px-32 xl:px-10 xl:h-5/6 xl:py-10 xl:mt-10 h-full w-full">
+          <h1 className="font-serif text-3xl xl:text-4xl font-bold tracking-wide md:tracking-wider">
             <span className="pt-2 border-b-2 lg:border-b-4 border-red-600">
               Ask a{" "}
             </span>

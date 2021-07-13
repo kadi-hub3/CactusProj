@@ -19,7 +19,7 @@ const Nav = () => {
       className={
         nav
           ? "fixed top-0 z-20 w-screen flex justify-between py-10 pl-6 lg:px-20 text-white text-lg bg-gray-900"
-          : "fixed top-0 z-20 w-screen flex justify-between py-10 pl-6 g:px-20 text-white text-lg bg-transparent"
+          : "fixed top-0 z-20 w-screen flex justify-between py-10 pl-6 lg:px-20 text-white text-lg bg-transparent"
       }
     >
       <h2
@@ -35,12 +35,12 @@ const Nav = () => {
         <FaBars
           className={
             nav
-              ? "text-white hover:text-red-900 lg:hidden"
-              : "text-gray-700 hover:text-gray-900 lg:hidden"
+              ? "text-white hover:text-red-900 xl:hidden"
+              : "text-gray-700 hover:text-gray-900 xl:hidden"
           }
         />
       </div>
-      <ul className="flex justify-end tracking-widest font-sans text-2xl hidden lg:flex">
+      <ul className="flex justify-end tracking-widest font-sans text-2xl hidden xl:flex">
         <li className="mx-4 hover:text-red-400">Home</li>
         <li className="mx-4 hover:text-red-400">About me</li>
         <li className="mx-4 hover:text-red-400">Contact</li>
