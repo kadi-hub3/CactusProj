@@ -35,7 +35,7 @@ const About = () => {
         <div className="relative w-5/6 2xl:w-full">
           <h1
             ref={(el) => (bigHeading = el)}
-            className="text-6xl lg:text-7xl xl:text-8xl text-gray-200 uppercase tracking-wider my-10 lg:my-20 font-bold"
+            className="text-6xl lg:text-7xl text-gray-200 uppercase tracking-wider my-10 lg:my-20 font-bold"
           >
             who <br /> we are ?
           </h1>
