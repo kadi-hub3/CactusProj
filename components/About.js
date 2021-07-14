@@ -41,7 +41,7 @@ const About = () => {
           </h1>
           <h2
             ref={(el) => (heading = el)}
-            className="font-serif absolute text-3xl lg:text-5xl xl:text-6xl left-0 top-10 font-bold tracking-wider leading-relaxed xl:leading-relaxed"
+            className="font-serif absolute text-3xl lg:text-5xl left-0 top-10 font-bold tracking-wider leading-relaxed"
           >
             <span className="pt-2 border-b-2 xl:border-b-4	border-red-600">
               {" "}

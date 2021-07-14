@@ -28,7 +28,7 @@ const Projects = () => {
         ref={(el) => (description = el)}
         className="row-span-3 my-8  lg:mb-40 xl:mb-12 xl:col-span-2 px-10"
       >
-        <h2 className="font-serif text-3xl lg:text-5xl xl:text-6xl font-bold tracking-wider py-4 leading-relaxed xl:leading-relaxed">
+        <h2 className="font-serif text-3xl lg:text-5xl font-bold tracking-wider py-4 leading-relaxed xl:leading-relaxed">
           <span className="pt-2 border-b-2 md:border-b-4 border-red-600">
             Recen
           </span>
