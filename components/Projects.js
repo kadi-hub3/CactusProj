@@ -9,18 +9,16 @@ const Projects = () => {
   let description = useRef(null);
   let swiper = useRef(null);
 
-  // useEffect(() => {
-  //   const tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: [description, swiper],
-  //       toggleActions: "restart none pause none",
-  //       markers: true,
-  //       // start: "top 80%",
-  //     },
-  //   });
-  //   tl.from(swiper, 1.2, { x: 1000, ease: Power3.easeOut }, 0.3);
-  //   tl.from(description, 1.2, { x: 2000, ease: Power3.easeOut }, 0.8);
-  // });
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: [description, swiper],
+        toggleActions: "restart none pause none",
+      },
+    });
+    tl.from(swiper, 1.2, { x: 1000, ease: Power3.easeOut }, 0.3);
+    tl.from(description, 1.2, { x: 2000, ease: Power3.easeOut }, 0.8);
+  });
 
   return (
     <section className="h-full w-full items-center justify-items-center py-20 grid grid-rows-6 grid-cols-1 xl:grid-cols-5 xl:grid-rows-3 lg:gap-x-20 md:px-20  xl:py-6 lg:px-36 bg-gray-100">

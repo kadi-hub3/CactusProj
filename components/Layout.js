@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Nav />
-      <div>
+      <div className="overflow-x-hidden">
         <Home />
         <About />
         <Projects />

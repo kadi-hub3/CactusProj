@@ -9,35 +9,16 @@ const Contact = () => {
   let form = useRef(null);
   let card = useRef(null);
 
-  // useEffect(() => {
-  //   const tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: [card, form],
-  //       toggleActions: "restart restart pause none",
-  //       markers: true,
-  //       autoRemoveChildren: true,
-  //       // start: "top 80%",
-  //     },
-  //   });
-  //   tl.from(
-  //     form,
-  //     1.2,
-  //     {
-  //       x: 1000,
-  //       ease: Power3.easeOut,
-  //     },
-  //     0.3
-  //   );
-  //   tl.from(
-  //     card,
-  //     1.2,
-  //     {
-  //       x: 1000,
-  //       ease: Power3.easeOut,
-  //     },
-  //     0.8
-  //   );
-  // });
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: [card, form],
+        toggleActions: "restart none pause none",
+      },
+    });
+    tl.from(card, 1.2, { x: 1000, ease: Power3.easeOut }, 0.3);
+    tl.from(form, 1.2, { x: 2000, ease: Power3.easeOut }, 0.8);
+  });
 
   return (
     <section className="h-full w-full items-center justify-items-center grid grid-rows-2 xl:grid-cols-5 xl:gap-x-20 xl:justify-center bg-white">

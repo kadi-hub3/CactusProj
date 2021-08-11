@@ -1,9 +1,6 @@
-// import Swiper core and required modules
 import SwiperCore, { Autoplay, Scrollbar, A11y } from "swiper";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// install Swiper modules
 SwiperCore.use([Autoplay, Scrollbar, A11y]);
 
 const SwiperProj = () => {

@@ -11,23 +11,21 @@ const About = () => {
   let text = useRef(null);
   let button = useRef(null);
 
-  // useEffect(() => {
-  //   const tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: [text, button, image, heading, bigHeading],
-  //       toggleActions: "restart none pause none",
-  //       markers: true,
-  //       // start: "top 80%",
-  //     },
-  //   });
-  //   tl.from([text, button], 1.2, { x: 1000, ease: Power3.easeOut }, 0.3);
-  //   tl.from(
-  //     [image, heading, bigHeading],
-  //     1.2,
-  //     { x: 2000, ease: Power3.easeOut },
-  //     0.8
-  //   );
-  // });
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: [text, button, image, heading, bigHeading],
+        toggleActions: "restart none pause none",
+      },
+    });
+    tl.from([text, button], 1.2, { x: 1000, ease: Power3.easeOut }, 0.3);
+    tl.from(
+      [image, heading, bigHeading],
+      1.2,
+      { x: 2000, ease: Power3.easeOut },
+      0.8
+    );
+  });
 
   return (
     <section className="h-full w-full flex items-center justify-items-center px-10 grid grid-rows-5 lg:grid-rows-4 xl:grid-rows-3 xl:grid-cols-4 xl:gap-x-20  md:px-20 xl:px-36 xl:py-20">

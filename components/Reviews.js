@@ -7,17 +7,15 @@ gsap.registerPlugin(ScrollTrigger);
 const Reviews = () => {
   let reviews = useRef(null);
 
-  // useEffect(() => {
-  //   const tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: reviews,
-  //       toggleActions: "restart none pause none",
-  //       markers: true,
-  //       // start: "top 80%",
-  //     },
-  //   });
-  //   tl.from(reviews, 1.2, { x: 1000, ease: Power3.easeOut }, 0.3);
-  // });
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: reviews,
+        toggleActions: "restart none pause none",
+      },
+    });
+    tl.from(reviews, 1.2, { x: 1000, ease: Power3.easeOut }, 0.3);
+  });
 
   return (
     <section

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import SwiperCore, { Navigation, Autoplay, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// install Swiper modules
 SwiperCore.use([Navigation, Autoplay, Scrollbar, A11y]);
 
 const SwiperReviews = () => {
